@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+h2 {
+    font-family: 'Roboto Mono', monospace;
+    padding: 0;
+    margin: 0;
+
+ } 
+ 
+.form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea {
+    margin-bottom: 20px;
+    resize: none;
+    border-radius: 12px;
+    
+}
+
+
+button {
+    margin-bottom: 20px;
+}
+
+#feedback-form {
+    width: 40%;
+    margin:3% auto;
+    background-color: #fcfcfc;
+    padding: 20px 50px 40px;
+    box-shadow: 1px 4px 10px 1px #aaa;
+    font-family: sans-serif;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3%;
+  }
+
+  img {
+    max-width: 75px;
+    max-height: 75px;
+  }
+
+  #feedback-form * {
+      box-sizing: border-box;
+  }
+  
+  #feedback-form h2{
+    text-align: center;
+  }
+  
+  #feedback-form textarea {
+    margin-bottom: 15px;
+  }
+  
+  #feedback-form textarea[type=text] {
+    display: block;
+    padding: 6px 16px;
+    width: 100%;
+    border: none;
+    background-color: #f3f3f3;
+  }
+  
+  #feedback-form label {
+    color: #777;
+    font-size: 0.8em;
+  }
+  
+

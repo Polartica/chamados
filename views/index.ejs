@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chamados</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  </head>
+  <body>
+
+          <div id="feedback-form">
+            <div class="header">
+              <img src="images/logo.png"></img>
+              <h2 >Abra seu chamado</h2>
+            </div>
+            
+            <div>
+              <form id="form" action="/" method="POST">
+                <textarea id="assunto" type="text" name="assunto" placeholder="Assunto" rows="1"></textarea>
+                <textarea id="texto" type="text" name="texto" placeholder="Descreva o problema" rows="10" ></textarea>
+                <textarea id="nome" type="text" id="feedback-phone" name="nome" placeholder="Nome ou setor" rows="1"></textarea>
+
+                <button id="sub" onclick="validate()"type="submit" class="btn btn-success">Enviar</button>
+                <span id="msg" class="alert alert-danger" role="alert"></span>
+
+              </form>
+          <form action= '/chamados' method="GET">
+              <button action= '/chamados' id="botao"   class="btn btn-primary" >Ver chamados em aberto</button>
+          </form>
+             
+            </div>
+          </div>
+          
+
+    
+  </body>
+  <script src="javascript/script.js"></script>
+</html>
