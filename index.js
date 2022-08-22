@@ -9,11 +9,7 @@ dotenv.config()
 app.use(express.static(__dirname + "/public"))
 app.use(express.urlencoded({extended: true}))
 
-mongoose.connect(process.env.DB_CONNECT, {useNewUrlParser: true}, () => {
-    console.log('connected')
-    app.listen(process.env.PORT, () => console.log("server up"));
 
-})
 
 app.set('view engine', 'ejs')
 
@@ -58,4 +54,10 @@ app.route("/remove/:id").get((req, res) => {
 });
 
 console.log("Database_URL", process.env.DATABASE_URL)
+
+mongoose.connect(process.env.DB_CONNECT, {useNewUrlParser: true}, () => {
+    console.log('connected')
+    app.listen(process.env.PORT, () => console.log("server up"));
+
+})
 
