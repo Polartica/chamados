@@ -57,3 +57,5 @@ app.route("/remove/:id").get((req, res) => {
     });
 });
 
+console.log("Database_URL", process.env.DATABASE_URL)
+
