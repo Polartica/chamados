@@ -50,7 +50,7 @@ app.route("/remove/:id").get((req, res) => {
     });
 });
 
-mongoose.connect(process.env.DB_CONNECT, {useNewUrlParser: true}, () => {
+mongoose.connect(DB_CONNECT = mongodb+srv://polartica:Pdb157889@cluster0.rwunath.mongodb.net/?retryWrites=true&w=majority&ssl=true, {useNewUrlParser: true}, () => {
     console.log('connected')
     
     app.listen(process.env.PORT, () => console.log("server up"));
