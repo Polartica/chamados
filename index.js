@@ -29,7 +29,6 @@ app.get("/chamados", (req, res) => {
 });
 
 app.post('/', async (req, res) => {
-    mongoose.model('TodoTask', todoTaskSchema);
     const todoTask = new TodoTask({
         assunto: req.body.assunto,
         texto: req.body.texto,
