@@ -19,6 +19,8 @@ app.get('/', (req, res) => {
 app.get("/chamados", (req, res) => {
     TodoTask.find({}, (err, tasks) => {
     res.render("chamados.ejs", { todoTasks: tasks });
+        
+        console.log(err);
     });
 });
 
