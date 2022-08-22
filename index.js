@@ -58,6 +58,7 @@ console.log("Database_URL", process.env.DB_CONNECT)
 
 mongoose.connect(process.env.DB_CONNECT, {useNewUrlParser: true}, () => {
     console.log('connected')
+    mongoose.model('TodoTask', todoTaskSchema)
     app.listen(process.env.PORT, () => console.log("server up"));
 
 })
