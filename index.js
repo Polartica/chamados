@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended: true}))
 
 mongoose.connect(process.env.DB_CONNECT, {useNewUrlParser: true}, () => {
     console.log('connected')
-    app.listen(3000, () => console.log("server up"));
+    app.listen(process.env.PORT, () => console.log("server up"));
 
 })
 
