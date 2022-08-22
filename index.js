@@ -53,7 +53,7 @@ app.route("/remove/:id").get((req, res) => {
     });
 });
 
-console.log("Database_URL", process.env.DATABASE_URL)
+console.log("Database_URL", process.env.DB_CONNECT)
 
 mongoose.connect(process.env.DB_CONNECT, {useNewUrlParser: true}, () => {
     console.log('connected')
