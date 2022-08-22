@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 
 
 
-app.get("/chamados", (req, res) => {
+app.get("./chamados", (req, res) => {
     TodoTask.find({}, (err, tasks) => {
     res.render("chamados.ejs", { todoTasks: tasks });
     });
@@ -49,7 +49,7 @@ app.post('/', async (req, res) => {
 
 })
 
-app.route("/remove/:id").get((req, res) => {
+app.route("./remove/:id").get((req, res) => {
     const id = req.params.id;
     TodoTask.findByIdAndRemove(id, err => {
     if (err) return res.send(500, err);
