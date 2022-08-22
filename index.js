@@ -9,18 +9,12 @@ dotenv.config()
 app.use(express.static(__dirname + "/public"))
 app.use(express.urlencoded({extended: true}))
 
-
-
 app.set('view engine', 'ejs')
-
-
 
 app.get('/', (req, res) => {
     res.render('index.ejs')
     
 })
-
-
 
 app.get("/chamados", (req, res) => {
     TodoTask.find({}, (err, tasks) => {
@@ -41,7 +35,7 @@ app.post('/', async (req, res) => {
 
     } catch (err) {
         res.redirect('/')
-        console.log(err)
+    
     }
 
 })
@@ -54,12 +48,9 @@ app.route("/remove/:id").get((req, res) => {
     });
 });
 
-console.log("Database_URL", process.env.DB_CONNECT)
-
 mongoose.connect(process.env.DB_CONNECT, {useNewUrlParser: true}, () => {
     console.log('connected')
     
     app.listen(process.env.PORT, () => console.log("server up"));
 
 })
-
