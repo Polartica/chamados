@@ -41,6 +41,7 @@ app.post('/', async (req, res) => {
 
     } catch (err) {
         res.redirect('/')
+        console.log(err)
     }
 
 })
